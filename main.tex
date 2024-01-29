@@ -85,7 +85,22 @@ where $\ket*{\Phi_{\mathbf{k}}}$ are orthonormal eigenstates of the momentum ope
         \braket*{\Phi_{\mathbf{k}}}{\Phi_{\mathbf{k}'}} = \delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')
     \end{split}
 \end{equation}
-and hence eigenstates of $H_0$ (not H), with eigenvalue $E(\mathbf{k}) = \hbar^2\mathbf{k}^2/2\mu$. 
+and hence eigenstates of $H_0$ (not H), with eigenvalue $E(|\mathbf{k}|) = \hbar^2\mathbf{k}^2/2\mu$. 
 Note that $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\text{ and } \ket*{\Phi_{\mathbf{k}}}$ belong to different Hilbert spaces.
-The 
+The incident wave packet $\ket*{\Psi_{g}(t)}$ should satisfy the normalization condition $\braket*{\Psi_{g}(t)}{\Psi_{g}(t)} = 1$, which is equivalent to the condition at time limit,
+\[\int\int{d^3kd^{3}k'\,g^{*}(\mathbf{k})g(\mathbf{k}')\exp(-i\frac{\hbar t}{2\mu}(\mathbf{k}'^2-\mathbf{k}^2))\delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')}\]
+\begin{equation}
+    = \hbar^{-3}\int{d^3k\,|g(\mathbf{k})|^2} = 1
+\end{equation}
+
+Rewrite the equation (1.2) as,
+\begin{equation}
+    \left(E(|\mathbf{k}|)-H_0\right)\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}
+\end{equation}
+This has a formal solution,
+\begin{equation}
+    \ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \ket*{\Phi_{\mathbf{k}}} + \left(E(|\mathbf{k}|)-H_0+i\epsilon\right)^{-1}\ket*{\Psi_{\mathbf{k}}^{\text{in}}}
+\end{equation}
+The first term on RHS could always be added up because it is the \textit{homogeneous} solution of equation (1.7), and $\epsilon$ is a positive infinitesimal quantity, which is inserted to give meaning to the operator $(E(|\mathbf{k}|)-H_0+i\epsilon)^{-1}$ when we integrate over the eigenvalues of $H_0$\footnote{It is more reasonable in path integral formalism that the additional term must be added to prevent the integral diverges at large value of wave function.}.
+It is known as the \textit{Lippmann-Schwinger equation}.
 \end{document}
