@@ -51,4 +51,41 @@ tabsize=3
 \maketitle
 \tableofcontents
 This article is designed for leading the reader from old scattering theory of quantum mechanics to nowadays scattering theory of quantum field theory.
+\section{Potential Scattering}
+In this chapter we would study the theory of scattering in a simple but important case, the elastic scattering of a non-relativistic particle in a local potential, but using modern techniques that could easily be extended to more general problems.
+\subsection{In-States}
+Consider a non-relativistic particle of mass $\mu$ in a potential $V(\mathbf{x})$, whose Hamiltonian is,
+\begin{equation}
+    H = H_0 + V(\mathbf{x})
+\end{equation}
+Here $H_0 = \mathbf{p}^2/2\mu$ is the kinetic energy operator. 
+The potential is assumed to be function of position operator, and tends to zero as $|\mathbf{x}| = r\rightarrow\infty$.
+Then it is concerned here with a positive-energy particle\footnote{Actually, there could possibly be negative energy if it is in bound state, that is, the energy is less than potential at boundaries. But now, we are considering scattering state, which is opposite with bound state.}.
+The particle comes into facing the potential from great distances regarded to have no interaction with momentum $\hbar\mathbf{k}$, and is scattered, going out again to infinity, generally along a different direction.
+\\\indent In Heisenberg picture, for a particle with momentum $\hbar\mathbf{k}$ far from the scattering center if the measurement of the particle is made at very early times, and this situation is represented by a time-independent state vector $\ket*{\Psi^{\text{in}}_{\mathbf{k}}}$.
+As mentioned, at very early times the particle is at a location that is far from the scattering center so that the potential is negligible there, so the state has an energy $\hbar^2\mathbf{k}^2/2\mu$, with the following relation,
+\begin{equation}
+    H\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \frac{\hbar^2\mathbf{k}^2}{2\mu}\ket*{\Psi_{\mathbf{k}}^{\text{in}}}
+\end{equation}
+
+Now switch to Schr$\ddot{\text{o}}$dinger picture, the state would evolve as time goes on.
+As mentioned, the scattering state would be continuous \textit{superposition}\footnote{It would be discrete sum for a bound state.} of states with a spread of energies,
+\begin{equation}
+    \ket*{\Psi_{g}(t)} = \int{d^{3}k\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
+\end{equation}
+where $g(\mathbf{k})$ is a smooth function that is peaked around some wave number $\mathbf{k}_0$.
+The eigenstate $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}$ satisfies the further condition that for any sufficiently smooth  function $g(\mathbf{k})$, in the limit $t\rightarrow-\infty$,
+\begin{equation}
+    \ket*{\Psi_{g}(t)}\rightarrow\int{d^3k\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Phi_{\mathbf{k}}}}
+\end{equation}
+where $\ket*{\Phi_{\mathbf{k}}}$ are orthonormal eigenstates of the momentum operator $\mathbf{P}$ with eigenvalue $\hbar\mathbf{k}$,
+\begin{equation}
+    \begin{split}
+        \mathbf{P}\ket*{\Phi_{\mathbf{k}}} = \hbar\mathbf{k}\ket*{\Phi_{\mathbf{k}}}\\
+        \braket*{\Phi_{\mathbf{k}}}{\Phi_{\mathbf{k}'}} = \delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')
+    \end{split}
+\end{equation}
+and hence eigenstates of $H_0$ (not H), with eigenvalue $E(\mathbf{k}) = \hbar^2\mathbf{k}^2/2\mu$. 
+Note that $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\text{ and } \ket*{\Phi_{\mathbf{k}}}$ belong to different Hilbert spaces.
+The 
 \end{document}
