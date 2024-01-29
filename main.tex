@@ -42,7 +42,7 @@ breaklines=true,
 breakatwhitespace=true,
 tabsize=3
 }
-\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
 
 \title{Scattering Theory}
 \author{Ting-Kai Hsu}
@@ -72,26 +72,26 @@ As mentioned, at very early times the particle is at a location that is far from
 Now switch to Schr$\ddot{\text{o}}$dinger picture, the state would evolve as time goes on.
 As mentioned, the scattering state would be continuous \textit{superposition}\footnote{It would be discrete sum for a bound state.} of states with a spread of energies,
 \begin{equation}
-    \ket*{\Psi_{g}(t)} = \int{d^{3}k\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
+    \ket*{\Psi_{g}(t)} = \int{d^{3}k/(2\pi)^3\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
 \end{equation}
 where $g(\mathbf{k})$ is a smooth function that is peaked around some wave number $\mathbf{k}_0$.
 The eigenstate $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}$ satisfies the further condition that for any sufficiently smooth  function $g(\mathbf{k})$, in the limit $t\rightarrow-\infty$,
 \begin{equation}
-    \ket*{\Psi_{g}(t)}\rightarrow\int{d^3k\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Phi_{\mathbf{k}}}}
+    \ket*{\Psi_{g}(t)}\rightarrow\int{d^3k/(2\pi)^3\,g(\mathbf{k})\exp(-i\frac{\hbar t\mathbf{k}^2}{2\mu})\ket*{\Phi_{\mathbf{k}}}}
 \end{equation}
 where $\ket*{\Phi_{\mathbf{k}}}$ are orthonormal eigenstates of the momentum operator $\mathbf{P}$ with eigenvalue $\hbar\mathbf{k}$,
 \begin{equation}
     \begin{split}
         \mathbf{P}\ket*{\Phi_{\mathbf{k}}} = \hbar\mathbf{k}\ket*{\Phi_{\mathbf{k}}}\\
-        \braket*{\Phi_{\mathbf{k}}}{\Phi_{\mathbf{k}'}} = \delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')
+        \braket*{\Phi_{\mathbf{k}}}{\Phi_{\mathbf{k}'}} = (2\pi)^3\delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')
     \end{split}
 \end{equation}
 and hence eigenstates of $H_0$ (not H), with eigenvalue $E(|\mathbf{k}|) = \hbar^2\mathbf{k}^2/2\mu$. 
 Note that $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\text{ and } \ket*{\Phi_{\mathbf{k}}}$ belong to different Hilbert spaces.
 The incident wave packet $\ket*{\Psi_{g}(t)}$ should satisfy the normalization condition $\braket*{\Psi_{g}(t)}{\Psi_{g}(t)} = 1$, which is equivalent to the condition at time limit,
-\[\int\int{d^3kd^{3}k'\,g^{*}(\mathbf{k})g(\mathbf{k}')\exp(-i\frac{\hbar t}{2\mu}(\mathbf{k}'^2-\mathbf{k}^2))\delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')}\]
+\[\int\int{d^3kd^{3}k'/(2\pi)^3\,g^{*}(\mathbf{k})g(\mathbf{k}')\exp(-i\frac{\hbar t}{2\mu}(\mathbf{k}'^2-\mathbf{k}^2))\delta^{(3)}(\hbar\mathbf{k} - \hbar\mathbf{k}')}\]
 \begin{equation}
-    = \hbar^{-3}\int{d^3k\,|g(\mathbf{k})|^2} = 1
+    = \hbar^{-3}\int{d^3k/(2\pi)^3\,|g(\mathbf{k})|^2} = 1
 \end{equation}
 
 Rewrite the equation (1.2) as,
@@ -107,23 +107,35 @@ It is known as the \textit{Lippmann-Schwinger equation}.
 The special feature of the particular 'solution' is that it also satisfies the additional initial condition.
 \\\indent To see this, we could expand $V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}$ in the orthonormal free-particle states $\ket*{\Phi_{\mathbf{q}}}$:
 \begin{equation}
-    V\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \int{d^3q\,\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
+    V\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \int{d^3q/(2\pi)^3\,\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
 \end{equation}
 Thus equation (1.8) becomes,
-\[\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \ket*{\Phi_{\mathbf{k}}} + \hbar^3\int{d^3q\,\left(E(|\mathbf{k}|) - H_0 + i\epsilon\right)^{-1}\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}\]
+\[\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \ket*{\Phi_{\mathbf{k}}} + \hbar^3\int{d^3q/(2\pi)^3\,\left(E(|\mathbf{k}|) - H_0 + i\epsilon\right)^{-1}\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}\]
 \begin{equation}
-    = \ket*{\Phi_{\mathbf{k}}} + \hbar^3\int{d^3q\,\left(E(|\mathbf{k}|) - E(|\mathbf{q}|) + i\epsilon\right)^{-1}\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
+    = \ket*{\Phi_{\mathbf{k}}} + \hbar^3\int{d^3q/(2\pi)^3\,\left(E(|\mathbf{k}|) - E(|\mathbf{q}|) + i\epsilon\right)^{-1}\ket*{\Phi_{\mathbf{q}}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}
 \end{equation}
 In calculating the integral over $\mathbf{k}$ in equation (1.3),
-\[\int{d^3k\,g(\mathbf{k})\frac{\exp(-i\hbar t\mathbf{k}^2/2\mu)}{E(|\mathbf{k}|)-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}\]
-\[=\int{d\Omega}\int_{0}^{\infty}{dk\,k^2g(\mathbf{k})}\frac{\exp(-i\hbar t\mathbf{k}^2/2\mu)}{E(k)-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\]
+\[\int{d^3k/(2\pi)^3\,g(\mathbf{k})\frac{\exp(-i\hbar t\mathbf{k}^2/2\mu)}{E(|\mathbf{k}|)-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}}\]
+\[=\int{d\Omega}\int_{0}^{\infty}{dk/(2\pi)^3\,k^2g(\mathbf{k})}\frac{\exp(-i\hbar t\mathbf{k}^2/2\mu)}{E(k)-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\]
 where $d\Omega = \sin\theta\,d\theta d\phi$. We could convert the integral over $k$ to an integral over the kinetic energy, using $dk = \mu dE/k\hbar^2$. Now, when $t\rightarrow-\infty$, the exponential term oscillates very rapidly, so that the only value of $E$ that contribute are \textit{those very near} $E(q)$, where the denominator also varies very rapidly.
-\[=\int{d\Omega}\int_{0}^{\infty}{dE\,\frac{\mu k}{\hbar^2}g(\mathbf{k})}\frac{\exp(-iEt/\hbar)}{E-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\]
+\[=\int{d\Omega}/(2\pi)^3\int_{0}^{\infty}{dE\,\frac{\mu k}{\hbar^2}g(\mathbf{k})}\frac{\exp(-iEt/\hbar)}{E-E(q)+i\epsilon}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}\]
 Hence, for the time limit $t\rightarrow-\infty$, we could set $k = q$ everywhere except in the rapidly varying exponential and denominator,
-\[=\int{d\Omega\,g(\Omega)\frac{\mu q}{\hbar^2}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{q}}^{\text{in}}}\int_{\text{around E(q)}}{dE\,\frac{\exp(-iEt/\hbar)}{E-E(q)+i\epsilon}}\]
+\[=\int{d\Omega/(2\pi)^3\,g(\Omega)\frac{\mu q}{\hbar^2}}\bra*{\Phi_{\mathbf{q}}}V\ket*{\Psi_{\mathbf{q}}^{\text{in}}}\int_{\text{around E(q)}}{dE\,\frac{\exp(-iEt/\hbar)}{E-E(q)+i\epsilon}}\]
 We could extend the integration range to the whole real axis, which is permissible because the integral receives no appreciable contributions anywhere that is far from $E(q)$,
 \begin{equation}
     \varpropto \int_{-\infty}^{\infty}{dE\,\frac{\exp(-iEt/\hbar)}{E-E(q)+i\epsilon}}
 \end{equation}
+For $t\rightarrow-\infty$, we can close the contour of the integration with a very large semi-circle in the upper half of the complex plane, on which the integration is negligible because, for $\Im(E)>0$ and $t\rightarrow-\infty$, the numerator $\exp(-iEt/\hbar)$ is exponentially small. 
+The only singularity of the integration is a pole at $E = E(q)-i\epsilon$, which is always in the lower half plane because $\epsilon$ is positive infinitesimal parameter.
+Hence, the integral vanishes for $t\rightarrow-\infty$.
+Only the first term of equation (1.10) is left, which gives the correct condition for $t\rightarrow-\infty$
+\subsection{Scattering Amplitudes}
+In the previous section, we defined a state that at early times has the appearance of a particle traveling toward a collision with a scattering center. 
+Now we must consider what this state looks like after the collision.
+\\\indent For this purpose, we consider the coordinate-space wave function of the state $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}$\footnote{By this way, it would give us a physically vivid picture about scattering.}.
+\begin{equation}
+    V\ket*{\Psi_{\mathbf{k}}^{\text{in}}} = \int{d^3x\,\ket*{\Phi_{\mathbf{x}}}\bra*{\Phi_{\mathbf{x}}}V\ket*{\Psi_{\mathbf{k}}^{\text{in}}}} = \int{d^3x\,\ket*{\Phi_{\mathbf{x}}}V(\mathbf{x})\psi_{\mathbf{k}}(\mathbf{x})}
+\end{equation}
+where $\psi_{\mathbf{k}}(\mathbf{x})$ is the coordinate-space wave function of the in-state.
 
 \end{document}

@@ -1,2 +1,3 @@
 \contentsline {section}{\numberline {1}Potential Scattering}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}In-States}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Scattering Amplitudes}{4}{subsection.1.2}%
