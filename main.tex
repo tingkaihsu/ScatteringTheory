@@ -153,10 +153,30 @@ where we define the Green function and then evaluate it by Fourier transform,
 \]
 \[ = \int{d^3q/(2\pi)^3\,\frac{e^{i\mathbf{q}\cdot(\mathbf{x}-\mathbf{y})}}{E(|\mathbf{k}|)-E(|\mathbf{q}|)+i\epsilon}}\]
 \[=\int{-d\cos(\theta) d\phi}\int{q^2dq/(2\pi)^3\,\frac{e^{iq|\mathbf{x}-\mathbf{y}|\cos(\theta)}}{\hbar^2k^2/2\mu-\hbar^2q^2/2\mu+i\epsilon}}\]
-\[ = \frac{2\pi}{(2\pi)^3}\int_{0}^{\infty}{q^2dq\,\frac{2i\sin(q|\mathbf{x}-\mathbf{y}|)}{q|\mathbf{x}-\mathbf{y}|}\frac{2\mu/\hbar^2}{k^2-q^2+i\epsilon}}\]
-\[=\frac{2\mu}{\hbar^2}\frac{1}{4\pi^2|\mathbf{x}-\mathbf{y}|}\int_{-\infty}^{\infty}{dq\,\frac{qe^{iq|\mathbf{x}-\mathbf{y}|}}{k^2-q^2+i\epsilon}}\]
+\[ = \frac{2\pi}{(2\pi)^3}\int_{0}^{\infty}{q^2dq\,\frac{2i\sin(q|\mathbf{x}-\mathbf{y}|)}{iq|\mathbf{x}-\mathbf{y}|}\frac{2\mu/\hbar^2}{k^2-q^2+i\epsilon}}\]
+\[=-i\frac{2\mu}{\hbar^2}\frac{1}{4\pi^2|\mathbf{x}-\mathbf{y}|}\int_{-\infty}^{\infty}{dq\,\frac{qe^{iq|\mathbf{x}-\mathbf{y}|}}{k^2-q^2+i\epsilon}}\]
 \begin{equation}
-    =-\frac{2\mu}{\hbar^2}\frac{1}{4\pi^2|\mathbf{x}-\mathbf{y}|}e^{ik|\mathbf{x}-\mathbf{y}|}
+    =-\frac{2\mu}{\hbar^2}\frac{1}{4\pi|\mathbf{x}-\mathbf{y}|}e^{ik|\mathbf{x}-\mathbf{y}|}
 \end{equation}
-
+The last line could be evaluated by completing the contour integral with a large semi-circle in the upper half plane.
+The poles are $q = \pm\sqrt{k^2-i\epsilon} = k\pm i\epsilon$, and picking up the contribution of pole $q = k+i\epsilon$.
+\[2\pi i\lim_{\epsilon\rightarrow0}\frac{(k+i\epsilon)e^{i(k+i\epsilon)|\mathbf{x}-\mathbf{y}|}}{-(k+q+i\epsilon)} = -\pi ie^{ik|\mathbf{x}-\mathbf{y}|}\]
+For a potential $V(\mathbf{y})$ that vanishes sufficiently rapidly as $|\mathbf{y}|\rightarrow\infty$.
+Write equation (1.14)
+\begin{equation}
+    \psi_{\mathbf{k}}(\mathbf{x}) = e^{i\mathbf{k}\cdot\mathbf{x}} + \int{d^3y\,G_{\mathbf{k}}(\mathbf{x}-\mathbf{y})V(\mathbf{y})\psi_{\mathbf{k}}(\mathbf{y})}
+\end{equation}
+For $|\mathbf{x}|\rightarrow\infty$,
+\begin{equation}
+    \psi_{\mathbf{k}}(\mathbf{x})\rightarrow e^{i\mathbf{k}\cdot\mathbf{x}}+f_{\mathbf{k}}(\hat{x})e^{ikr}/r
+\end{equation}
+where $|\mathbf{x}|\equiv r$ and $f_{\mathbf{k}}(\hat{x})$ is \textit{scattering amplitude}.
+\begin{equation}
+    f_{\mathbf{k}}(\hat{x}) = -\frac{\mu}{2\pi\hbar^2}\int{d^3y\,e^{-ik\hat{x}\cdot\mathbf{y}}V(\mathbf{y})\psi_{\mathbf{k}}(\mathbf{y})}
+\end{equation}
+There is an interesting result that the coordinate-space wave function would have incident-coming wave part and scattering wave part, and the scattering wave part would act like spherical wave.
+\\\indent Now let's consider how the superposition equation (1.3),
+\begin{equation}
+    \psi_{g}(\mathbf{x}, t)\equiv\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)} = \int{d^3k\,g(\mathbf{k})\psi_{\mathbf{k}}(\mathbf{x})\exp(-i\hbar t\mathbf{k}^2/2\mu)}
+\end{equation}
 \end{document}
