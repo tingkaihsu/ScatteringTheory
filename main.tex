@@ -52,6 +52,7 @@ tabsize=3
 \maketitle
 \tableofcontents
 This article is designed for leading the reader from old scattering theory of quantum mechanics to nowadays scattering theory of quantum field theory.
+The quantum mechanics part would be based on \textit{Lectures on Quantum Mechanics} by S.Weinberg.
 \section{Potential Scattering}
 In this chapter we would study the theory of scattering in a simple but important case, the elastic scattering of a non-relativistic particle in a local potential, but using modern techniques that could easily be extended to more general problems.
 \subsection{In-States}
@@ -179,4 +180,15 @@ There is an interesting result that the coordinate-space wave function would hav
 \begin{equation}
     \psi_{g}(\mathbf{x}, t)\equiv\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)} = \int{d^3k\,g(\mathbf{k})\psi_{\mathbf{k}}(\mathbf{x})\exp(-i\hbar t\mathbf{k}^2/2\mu)}
 \end{equation}
+in the limit $t\rightarrow+\infty$, with $r/t$ held fixed, and $\mathbf{x}$ off the 3-axis\footnote{Which means the first term in equation (1.17) vanishes.}, equation (1.19) gives\footnote{We would assume that the particle comes in from a great distance along the negative 3-axis, so we are interested in the limit of very large negative $t$ and $x_3$, but with $x_3/t$ held finite. And also assume the particle velocity is sufficiently closely confined to the 3-direction, where the function $g(\mathbf{k})$ is not negligible.},
+\[\psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{r}\int{d^2k_{\perp}}\int_{-\infty}^{\infty}{dk_3\,g(\mathbf{k}_{\perp}, k_3)}\]
+\begin{equation}
+    \times\exp(ik_3r-i\hbar tk_3^2/2\mu)f_{\mathbf{k}_0}(\hat{x})
+\end{equation}
+We have taken the subscript on the scattering amplitude to be $\mathbf{k}_{0}$, because the function $g$ is sharply peaked at this value of $\mathbf{k}$, and we have approximated $k = \sqrt{k_3^2+\mathbf{k}_{\perp}^2}$ as $k\approx k_3$ in the exponent, because $g(\mathbf{k}_{\perp}, k_3)$ is assumed to be negligible except for $|\mathbf{k}_{\perp}|<<k_3$.
+That is, we assume that the function $g(\mathbf{k}_{\perp}, k_3)$, though smooth, is strongly peaked at $k_3=k_0$ and $\mathbf{k}_{\perp} = 0$, so we could set $k_3$ in $g(\mathbf{k}_{\perp}, k_3)$ equal to the value $k_3\mu r/\hbar t$, so that,
+\[
+    \psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{r}f_{\mathbf{k}_0}(\hat{x})\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mur/\hbar t)}
+\]
+\[\times\int_{-\infty}^{\infty}{dk_3\,\exp(ik_3r-i\hbar tk_3^2\mu)}\]
 \end{document}
