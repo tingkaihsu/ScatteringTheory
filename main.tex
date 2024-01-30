@@ -178,17 +178,37 @@ where $|\mathbf{x}|\equiv r$ and $f_{\mathbf{k}}(\hat{x})$ is \textit{scattering
 There is an interesting result that the coordinate-space wave function would have incident-coming wave part and scattering wave part, and the scattering wave part would act like spherical wave.
 \\\indent Now let's consider how the superposition equation (1.3),
 \begin{equation}
-    \psi_{g}(\mathbf{x}, t)\equiv\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)} = \int{d^3k\,g(\mathbf{k})\psi_{\mathbf{k}}(\mathbf{x})\exp(-i\hbar t\mathbf{k}^2/2\mu)}
+    \psi_{g}(\mathbf{x}, t)\equiv\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)} = \int{d^3k/(2\pi)^3\,g(\mathbf{k})\psi_{\mathbf{k}}(\mathbf{x})\exp(-i\hbar t\mathbf{k}^2/2\mu)}
 \end{equation}
 in the limit $t\rightarrow+\infty$, with $r/t$ held fixed, and $\mathbf{x}$ off the 3-axis\footnote{Which means the first term in equation (1.17) vanishes.}, equation (1.19) gives\footnote{We would assume that the particle comes in from a great distance along the negative 3-axis, so we are interested in the limit of very large negative $t$ and $x_3$, but with $x_3/t$ held finite. And also assume the particle velocity is sufficiently closely confined to the 3-direction, where the function $g(\mathbf{k})$ is not negligible.},
-\[\psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{r}\int{d^2k_{\perp}}\int_{-\infty}^{\infty}{dk_3\,g(\mathbf{k}_{\perp}, k_3)}\]
+\[\psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{(2\pi)^3r}\int{d^2k_{\perp}}\int_{-\infty}^{\infty}{dk_3\,g(\mathbf{k}_{\perp}, k_3)}\]
 \begin{equation}
     \times\exp(ik_3r-i\hbar tk_3^2/2\mu)f_{\mathbf{k}_0}(\hat{x})
 \end{equation}
 We have taken the subscript on the scattering amplitude to be $\mathbf{k}_{0}$, because the function $g$ is sharply peaked at this value of $\mathbf{k}$, and we have approximated $k = \sqrt{k_3^2+\mathbf{k}_{\perp}^2}$ as $k\approx k_3$ in the exponent, because $g(\mathbf{k}_{\perp}, k_3)$ is assumed to be negligible except for $|\mathbf{k}_{\perp}|<<k_3$.
-That is, we assume that the function $g(\mathbf{k}_{\perp}, k_3)$, though smooth, is strongly peaked at $k_3=k_0$ and $\mathbf{k}_{\perp} = 0$, so we could set $k_3$ in $g(\mathbf{k}_{\perp}, k_3)$ equal to the value $k_3\mu r/\hbar t$, so that,
+That is, we assume that the function $g(\mathbf{k}_{\perp}, k_3)$, though smooth, is strongly peaked at $k_3=k_0$ and $\mathbf{k}_{\perp} = 0$, so we could set $k_3$ in $g(\mathbf{k}_{\perp}, k_3)$ equal to the value $\mu r/\hbar t$, so that,
 \[
-    \psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{r}f_{\mathbf{k}_0}(\hat{x})\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mur/\hbar t)}
+    \psi_{g}(\mathbf{x}, t)\rightarrow\frac{1}{(2\pi)^3r}f_{\mathbf{k}_0}(\hat{x})\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu r/\hbar t)}
 \]
-\[\times\int_{-\infty}^{\infty}{dk_3\,\exp(ik_3r-i\hbar tk_3^2\mu)}\]
+\[\times\int_{-\infty}^{\infty}{dk_3\,\exp(ik_3r-i\hbar tk_3^2/2\mu)}\]
+\begin{equation}
+    =\frac{1}{(2\pi)^3r}f_{\mathbf{k}_0}\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu r/\hbar t)\exp(i\mu r^2/2\hbar t)\sqrt{\frac{2\pi\,\mu}{i\hbar t}}}
+\end{equation}
+Where we reach the last line by Gaussian integral.
+\\\indent The probability $dP(\hat{x})$ that the particle at late times is somewhere within the cone of infinitesimal solid angle $d\omega$ around the direction $\hat{x}$ is then the integral of $|\psi_{g}(\mathbf{x}, t)|^2$ over this cone:
+\begin{equation}
+    dP(\hat{x}, \mathbf{k}_0) = d\Omega\int_{0}^{\infty}{r^2dr\,|\psi_{g}(\mathbf{x}, t)|^2}
+\end{equation}
+\[\rightarrow d\Omega\frac{2\mu\pi}{(2\pi)^3\hbar t}|f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dr\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu r/\hbar t)}\right|^2}\]
+changing the variable of integration $r$ to $k_3\equiv\mu r/\hbar t$,
+\begin{equation}
+    \frac{d\,P(\hat{x}, \mathbf{k}_0)}{d\Omega} = |f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dk_3/(2\pi)^3\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, k_3)}\right|^2}
+\end{equation}
+
+Now, the coefficient of $|f_{\mathbf{k}_0}(\hat{x})|^2$ in equation (1.23) has the dimensions of an inverse area. In fact, it is precisely the probability per unit area that the particle is in a small area centered on the 3-axis and normal to that axis:
+\begin{equation}
+    \rho_{\perp}\equiv\lim_{t\rightarrow-\infty}\int_{-\infty}^{\infty}{dx_{3}\,\left|\psi_{g}(0, x_3, t)\right|^2}
+\end{equation}
+To see this, recall equation (1.4) and its scalar product with state of definite position,
+\[\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)}\rightarrow\int{d^3k/(2\pi)^3\,g(\mathbf{k})\exp(i\mathbf{k}\cdot\mathbf{x}-i\hbar t\mathbf{k}^2/2\mu)}\]
 \end{document}
