@@ -51,6 +51,7 @@ tabsize=3
 \begin{document}
 \maketitle
 \tableofcontents
+\part{Quantum Mechanics}
 This article is designed for leading the reader from old scattering theory of quantum mechanics to nowadays scattering theory of quantum field theory.
 The quantum mechanics part would be based on \textit{Lectures on Quantum Mechanics} by S.Weinberg.
 \section{Potential Scattering}
@@ -199,10 +200,10 @@ Where we reach the last line by Gaussian integral.
 \begin{equation}
     dP(\hat{x}, \mathbf{k}_0) = d\Omega\int_{0}^{\infty}{r^2dr\,|\psi_{g}(\mathbf{x}, t)|^2}
 \end{equation}
-\[\rightarrow d\Omega\frac{2\mu\pi}{(2\pi)^3\hbar t}|f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dr\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu r/\hbar t)}\right|^2}\]
+\[\rightarrow d\Omega\frac{2\mu\pi}{(2\pi)^6\hbar t}|f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dr\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu r/\hbar t)}\right|^2}\]
 changing the variable of integration $r$ to $k_3\equiv\mu r/\hbar t$,
 \begin{equation}
-    \frac{d\,P(\hat{x}, \mathbf{k}_0)}{d\Omega} = |f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dk_3/(2\pi)^3\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, k_3)}\right|^2}
+    \frac{d\,P(\hat{x}, \mathbf{k}_0)}{d\Omega} = |f_{\mathbf{k}_0}(\hat{x})|^2\int_{0}^{\infty}{dk_3/(2\pi)^5\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, k_3)}\right|^2}
 \end{equation}
 
 Now, the coefficient of $|f_{\mathbf{k}_0}(\hat{x})|^2$ in equation (1.23) has the dimensions of an inverse area. In fact, it is precisely the probability per unit area that the particle is in a small area centered on the 3-axis and normal to that axis:
@@ -222,6 +223,36 @@ Replace $k_3$ with $k_3 = \mu x_3/\hbar t$ except the exponent term.
 \end{equation}
 Therefore, in particular as $t$ tends to infinity far ($\infty$), the spatial probability distribution is,
 \begin{equation}
-    \left|\right|^2
+    \left|\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)}\right|^2\rightarrow\frac{\mu}{\hbar t(2\pi)^5}\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu x_3/\hbar t)\exp(i\mathbf{k}_{\perp}\cdot\mathbf{x}_{\perp})}\right|^2
 \end{equation}
+Integrate over spatial with equation (1.26)\footnote{Note that we only integrate over 3-axis, so the dimension is the probability per unit area.},
+\[\rho_{\perp} = \int{dx_3\,\left|\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)}\right|^2} \rightarrow  \frac{\mu}{\hbar t(2\pi)^5}\int{dx_3\,}\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu x_3/\hbar t)}\right|^2\]
+\[\rightarrow\frac{1}{(2\pi)^5}\int{dk_3\,\left|\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu x_3/\hbar t)}\right|^2}\]
+Hence, equation (1.23) may be written,
+\begin{equation}
+    \frac{dP(\hat{x}, \mathbf{k}_{0})}{d\Omega} = \rho_{\perp}\left|f_{\mathbf{k}_{0}}(\hat{x})\right|^2
+\end{equation}
+We define the \textit{differential cross-section} as the ratio,
+\begin{equation}
+    \frac{d\sigma(\hat{x}, \mathbf{k}_{0})}{d\Omega} \equiv \frac{1}{\rho_{\perp}}\frac{dP(\hat{x}, \mathbf{k}_0)}{d\Omega} = \left|f_{\mathbf{k}_0}(\hat{x})\right|^2
+\end{equation}
+We could think of $d\sigma(\hat{x}, \mathbf{k}_0)$ as a tiny area normal to the 3-axis, where the incoming particle must hit in order for it to be scattered into a solid angle $d\Omega$ around the direction $\hat{x}$.
+The equation (1.28) then says that the probability of the above process to happen equals the ratio of $d\omega$ to the effective cross-sectional area $1/\rho_{\perp}$ of the beam.
+\\\indent Of course, to measure $d\sigma/d\Omega$, experimenters do not actually send a particle or particles toward a single target. 
+Instead, they direct a beam of particles toward a thin slab containing some large number $N_{\text{T}}$ of targets.
+Scattering into some particular range of angles can occur only if a particle from the beam hits a tiny area $d\sigma$ around one of the targets, then the number of particles that are scattered into this range of angles\footnote{Or says, the number of scattering event.} is the number of beam particles per unit transverse area $\mathcal{N}_{\text{B}}$, times the total area $N_{\text{T}}d\sigma$ that the beam particles have to hit upon.
+\section{General Scattering Theory}
+There are much more general circumstances to which scattering theory is applicable.
+The scattering can produce additional particles; the interaction may not be a local potential; some or all of the particles involved may be moving at relativistic velocities; some may be photon (massless); and the initial state may even contain more than two particles.
+This section would describe scattering theory at a level of generality that encompasses all these possibilities.
+\subsection{The S-Matrix}
+\subsection{Rates}
+\subsection{The General Optical Theorem}
+\part{Quantum Field Theory}
+\section{Introduction to Perturbation Theory and Scattering} 
+\section{Perturbation I. Wick Diagrams}
+\section{Perturbation II. Divergence and Counterterms}
+\section{Feynman Diagrams}
+\section{Cross-Sections S-Matrix}
+\section{Computing S-Matrix Elements from Feynman Diagrams}
 \end{document}
