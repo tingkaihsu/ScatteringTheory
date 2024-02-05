@@ -215,5 +215,13 @@ As what we've done in equation (1.21), we assume that the particle moves along t
 \[\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)}\rightarrow\]\[\frac{1}{(2\pi)^3}\int{d^2k_{\perp}}\int{dk_3\,g(\mathbf{k}_{\perp}, k_3)\exp\left(i\mathbf{k}_{\perp}\cdot\mathbf{x}_{\perp}+ik_3x_3-i\hbar t(k_3-\mu x_3/\hbar t)^2/2\mu\right)}\]
 Replace $k_3$ with $k_3 = \mu x_3/\hbar t$ except the exponent term.
 \[\braket*{\Phi_{\mathbf{x}}}{\Psi_{g}(t)}\rightarrow\]
-\[\exp\]
+\[\frac{1}{(2\pi)^3}\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp}, \mu x_3/\hbar t)}\exp(i\mathbf{k}_{\perp}\cdot\mathbf{x}_{\perp})\]
+\[\times\exp(ix^2_3\mu/2\hbar t)\int_{-\infty}^{\infty}{dk_3\,\exp\left(-i\hbar t (k_3-\mu x_3/\hbar t)^2/2\mu\right)}\]
+\begin{equation}
+    =\frac{1}{(2\pi)^3}\exp(ix^2_3\mu/2\hbar t)\sqrt{\frac{2\mu\pi}{i\hbar t}}\times\int{d^2k_{\perp}\,g(\mathbf{k}_{\perp},\mu x_3/\hbar t)\exp(i\mathbf{k}_{\perp}\cdot\mathbf{x}_{\perp})}
+\end{equation}
+Therefore, in particular as $t$ tends to infinity far ($\infty$), the spatial probability distribution is,
+\begin{equation}
+    \left|\right|^2
+\end{equation}
 \end{document}
