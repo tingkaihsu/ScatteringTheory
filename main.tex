@@ -291,12 +291,28 @@ In both cases the pole at $E_{\alpha} = E_{\beta}\mp i\epsilon$ is outside the c
 \\\indent The "in" and "out" states inhabit the same Hilbert space, and are distinguished only by how they are described, by their appearance at $t\rightarrow-\infty$ or at $t\rightarrow\infty$.
 Indeed, any "in" state can be expressed as a superposition of "out" states:
 \begin{equation}
-    \ket*{\Psi_{\alpha}^{+}} = \int{d\beta\, S_{\alpha\beta}\ket*{\Psi_{\beta}^{-}}}
+    \ket*{\Psi_{\alpha}^{+}} = \int{d\beta\, S_{\beta\alpha}\ket*{\Psi_{\beta}^{-}}}
 \end{equation}
 The coefficient $S_{\alpha\beta}$ in this relation form is known as the \textit{S-matrix}.
-If we 
-
-
+If we  arrange a state so that it appears at $t\rightarrow-\infty$ like a free-particle state $\ket*{\Phi_{\alpha}}$, then the state is $\ket*{\Psi_{\alpha}^{+}}$, and equation (2.8) tells us that the state will appear at late times like the superposition $\int{d\beta\,S_{\beta\alpha}\ket*{\Phi_{\beta}}}$.
+As we will see, the S-matrix contains all information about the rates of reactions among particles of any sort.
+\\\indent We can derive a useful formula for the S-matrix by considering what the "in" state looks like if measurements are made at \textit{late} times.
+We again use equation (2.7) for $\ket*{\Psi_{\alpha}^{+}}$, but now because $t>0$ we can only close the contour of integration of $E_{\alpha}$ in the second term with a large semicircle in the \textit{lower} half of the complex plane, so now we receive a contribution from the pole at $E_{\alpha} = E_{\beta}-i\epsilon$\footnote{Because the pole is at the lower half of the complex plane.}.
+Because we are integrating over a closed contour running in the \textit{clockwise} direction, the contribution of this pole is $-2\pi i$ times the same integral, but with the denominator dropped, and with the integration over $E_{\alpha}$ replaced by setting $E_{\alpha} = E_{\beta} - i\epsilon$ in the remainder of the integral. 
+Because $\epsilon$ is infinitesimal positive, this is just amounts to replacing $\left(E_{\alpha}-E_{\beta}+i\epsilon\right)^{-1}$ in equation (2.7) with $-2\pi i\delta(E_{\alpha}-E_{\beta})$, so that for $t\rightarrow+\infty$
+\[\int{d\alpha\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\ket*{\Psi_{\alpha}^{+}}}\rightarrow\int{d\alpha\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\ket*{\Phi_{\alpha}}}\]
+\begin{equation}
+    -2\pi i\int{d\alpha}\int{d\beta\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{+}}\delta(E_{\alpha}-E_{\beta})\ket*{\Phi_{\beta}}}
+\end{equation} 
+As mentioned previously, the state $\ket*{\Psi_{\alpha}^{+}}$ would, at $t\rightarrow-\infty$, look like the superposition $\int{d\beta\,S_{\beta\alpha}\ket*{\Phi_{\beta}}}$, so from equation (2.9), we have,
+\begin{equation}
+    S_{\beta\alpha} = \delta(\beta-\alpha)-2\pi i\delta(E_{\alpha}-E_{\beta})T_{\beta\alpha}
+\end{equation} 
+where
+\begin{equation}
+    T_{\beta\alpha} \equiv \bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{+}}
+\end{equation}
+\\\indent 
 \subsection{Rates}
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
