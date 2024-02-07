@@ -246,6 +246,28 @@ There are much more general circumstances to which scattering theory is applicab
 The scattering can produce additional particles; the interaction may not be a local potential; some or all of the particles involved may be moving at relativistic velocities; some may be photon (massless); and the initial state may even contain more than two particles.
 This section would describe scattering theory at a level of generality that encompasses all these possibilities.
 \subsection{The S-Matrix}
+We again assume that the Hamiltonian $H$ is the sum of an unperturbed Hermitian (free Hamiltonian) term $H_0$, describing any number of non-interacting particles, plus some sort of interaction $V$:
+\begin{equation}
+    H = H_0 + V
+\end{equation}
+The only assumptions we make about $V$ are that it is Hermitian, and that its effects become negligible when the particles described by $H_0$ are fall from one another\footnote{Neither scattering center nor local potential are considered in general scattering theory.}.
+\\\indent In section 1.1 we defined an "in" state $\ket*{\Psi_{\mathbf{k}}^{\text{in}}}$ as an eigenstate of the Hamiltonian $H$ that looks like it consists of a single particle with momentum $\hbar\mathbf{k}$ far from the scattering center if measurements are made at sufficiently early times.
+We generalize this definition, and define "in" and "out" state $\ket*{\Psi_{\alpha}^{+}}$ and $\ket*{\Psi_{\alpha}^{-}}$ as eigenstates of the Hamiltonian
+\begin{equation}
+    H\ket*{\Psi_{\alpha}^{\pm}} = E_{\alpha}\ket{\Psi_{\alpha}^{\pm}}
+\end{equation}
+and both look like an eigenstate $\Phi_{\alpha}$ of the free-particle Hamiltonian
+\begin{equation}
+    H_0\ket*{\Phi_{\alpha}} = E_{\alpha}\ket*{\Phi_{\alpha}}
+\end{equation}
+The states consist of a number of particles at great distances from each other\footnote{Where the effects of interaction are negligible.}, provided measurements are made at very early times (for $\ket*{\Psi_{\alpha}^{+}}$) or very late times (for $\ket*{\Psi_{\alpha}^{-}}$).
+Here $\alpha$ is a compound index, standing for the types and numbers of the particles in the state, as well as their momenta and spin 3-componets (or helicities).
+It will be convenient to choose the states $\ket*{\Phi_{\alpha}}$ to be orthonormal
+\begin{equation}
+    \braket*{\Phi_{\beta}}{\Phi_{\alpha}} = \delta(\beta-\alpha)
+\end{equation}
+The ambiguous delta function $\delta(\alpha-\beta)$ consists of a product of Kronecher deltas for the numbers and types and spin 3-componets of corresponding particles in the states $\alpha$ and $\beta$, together with 3-dimensional delta functions for the momenta of the corresponding particles in these states.
+\\\indent The definition of $\ket*{\Psi_{\alpha}^{+}}$ and $\ket*{\Psi_{\alpha}^{-}}$ can be made more precise by specifying that if $g(\alpha)$ \textbf{is a sufficiently smooth function of the momenta} in the state $\alpha$, then (as a generalization of equation (1.4))
 \subsection{Rates}
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}

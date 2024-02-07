@@ -4,12 +4,12 @@
 \contentsline {subsection}{\numberline {1.2}Scattering Amplitudes}{5}{subsection.1.2}%
 \contentsline {section}{\numberline {2}General Scattering Theory}{9}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The S-Matrix}{10}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Rates}{10}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The General Optical Theorem}{10}{subsection.2.3}%
-\contentsline {part}{II\hspace {1em}Quantum Field Theory}{10}{part.2}%
-\contentsline {section}{\numberline {3}Introduction to Perturbation Theory and Scattering}{10}{section.3}%
-\contentsline {section}{\numberline {4}Perturbation I. Wick Diagrams}{10}{section.4}%
-\contentsline {section}{\numberline {5}Perturbation II. Divergence and Counterterms}{10}{section.5}%
-\contentsline {section}{\numberline {6}Feynman Diagrams}{10}{section.6}%
-\contentsline {section}{\numberline {7}Cross-Sections S-Matrix}{10}{section.7}%
-\contentsline {section}{\numberline {8}Computing S-Matrix Elements from Feynman Diagrams}{10}{section.8}%
+\contentsline {subsection}{\numberline {2.2}Rates}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The General Optical Theorem}{11}{subsection.2.3}%
+\contentsline {part}{II\hspace {1em}Quantum Field Theory}{11}{part.2}%
+\contentsline {section}{\numberline {3}Introduction to Perturbation Theory and Scattering}{11}{section.3}%
+\contentsline {section}{\numberline {4}Perturbation I. Wick Diagrams}{11}{section.4}%
+\contentsline {section}{\numberline {5}Perturbation II. Divergence and Counterterms}{11}{section.5}%
+\contentsline {section}{\numberline {6}Feynman Diagrams}{11}{section.6}%
+\contentsline {section}{\numberline {7}Cross-Sections S-Matrix}{11}{section.7}%
+\contentsline {section}{\numberline {8}Computing S-Matrix Elements from Feynman Diagrams}{11}{section.8}%
