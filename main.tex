@@ -272,6 +272,31 @@ The ambiguous delta function $\delta(\alpha-\beta)$ consists of a product of Kro
     \int{d\alpha\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\ket*{\Psi_{\alpha}^{\pm}}}\rightarrow\int{d\alpha\,g(\alpha)\exp{-iE_{\alpha}t/\hbar}\ket*{\Phi_{\alpha}}}
 \end{equation}
 for $t\rightarrow\mp\infty$. (Ambiguously integrals over $\alpha$ include sums over the numbers and types of particles along with the 3-components of their spins, as well as integrals over the momenta of all the particles in the state $\alpha$.)
+We could satisfy this condition by rewriting equation (2.5) as a generalization of the Lippmann-Schwinger equation (1.8):
+\begin{equation}
+    \Psi^{\pm}_{\alpha} = \Phi_{\alpha}+\left(E_{\alpha}-H_0\pm\epsilon\right)^{-1}V\Psi_{\alpha}^{\pm}
+\end{equation}
+with $\epsilon$ is positive infinitesimal parameter. Equation (2.5) then follows by a simple extension of the argument used in Section 1.1. 
+From equation (2.6) we can verify the further condition (equation (2.5)) of superposition of plane wave
+\[
+    \int{d\alpha\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\ket*{\Psi_{\alpha}^{\pm}}} = \int{d\alpha\,g(\alpha)\exp(-iE_{\alpha}t/\hbar)\ket*{\Phi_{\alpha}}}
+\]
+\begin{equation}
+    +\int{d\alpha}\int{d\beta\,\frac{g(\alpha)\exp(-iE_{\alpha}t/\hbar)\bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{\pm}}}{E_{\alpha}-E_{\beta}\pm i\epsilon}\ket*{\Phi_{\beta}}}
+\end{equation}\footnote{We integrate over $\beta$ so that the free-particle operator $H_0$ would become eigenvalue $E_{\beta}$.}
+The rapid oscillation of the exponential in the second term on the right-hand side kills all contributions to this integral except those from $E_{\alpha}$ near $E_{\beta}$, where the denominator also varies rapidly. 
+In particular, as we did in Section 1.1, this allows us to extend the integral to all real $E_{\alpha}$\footnote{Because $d\alpha$, as mentioned before, represents the integration over the momenta of all the particles in the state $\alpha$, which can be easily changed to integral over the energy by energy-momentum relation.}, because no part of the range of integration except very near $E_{\beta}$ will contribute as $|t|\rightarrow\infty$.
+This integral can be evaluated for $|t|\rightarrow\infty$ by closing the contour of integration over $E_{\alpha}$ with a large semicircle in the upper half of the complex plane for $t\rightarrow-\infty$ or in the lower half of the complex plane for $t\rightarrow\infty$, because in both case the factor $\exp(-iE_{\alpha}t/\hbar)$ is exponentially damped on the semicircle due to the positive (negative) imagery part of $E_{\alpha}$.
+In both cases the pole at $E_{\alpha} = E_{\beta}\mp i\epsilon$ is outside the contour of integration, so this integral vanishes, leaving us with equation (2.5).
+\\\indent The "in" and "out" states inhabit the same Hilbert space, and are distinguished only by how they are described, by their appearance at $t\rightarrow-\infty$ or at $t\rightarrow\infty$.
+Indeed, any "in" state can be expressed as a superposition of "out" states:
+\begin{equation}
+    \ket*{\Psi_{\alpha}^{+}} = \int{d\beta\, S_{\alpha\beta}\ket*{\Psi_{\beta}^{-}}}
+\end{equation}
+The coefficient $S_{\alpha\beta}$ in this relation form is known as the \textit{S-matrix}.
+If we 
+
+
 \subsection{Rates}
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
