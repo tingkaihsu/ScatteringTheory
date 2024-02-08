@@ -42,7 +42,11 @@ breaklines=true,
 breakatwhitespace=true,
 tabsize=3
 }
+\usepackage{xcolor}
+\usepackage{lipsum}
+\newcommand{\cstars}{\vskip 1.2ex\noindent\par\makebox[\linewidth]{\color{cyan}* * * }\par}
 \numberwithin{equation}{section}
+
 
 \title{Scattering Theory}
 \author{Ting-Kai Hsu}
@@ -274,7 +278,7 @@ The ambiguous delta function $\delta(\alpha-\beta)$ consists of a product of Kro
 for $t\rightarrow\mp\infty$. (Ambiguously integrals over $\alpha$ include sums over the numbers and types of particles along with the 3-components of their spins, as well as integrals over the momenta of all the particles in the state $\alpha$.)
 We could satisfy this condition by rewriting equation (2.5) as a generalization of the Lippmann-Schwinger equation (1.8):
 \begin{equation}
-    \Psi^{\pm}_{\alpha} = \Phi_{\alpha}+\left(E_{\alpha}-H_0\pm\epsilon\right)^{-1}V\Psi_{\alpha}^{\pm}
+    \Psi^{\pm}_{\alpha} = \Phi_{\alpha}+\left(E_{\alpha}-H_0\pm i\epsilon\right)^{-1}V\Psi_{\alpha}^{\pm}
 \end{equation}
 with $\epsilon$ is positive infinitesimal parameter. Equation (2.5) then follows by a simple extension of the argument used in Section 1.1. 
 From equation (2.6) we can verify the further condition (equation (2.5)) of superposition of plane wave
@@ -319,6 +323,45 @@ where
     =S_{\beta\alpha}
 \end{equation}
 Thus $S_{\beta\alpha}$ is the probability amplitude that a state that is arranged to look like the free-particle state $\ket*{\Phi_{\alpha}}$ at $t\rightarrow-\infty$ and would look like the free-particle state $\ket*{\Phi_{\beta}}$ when measurements are made at $t\rightarrow\infty$.
+\cstars
+We have chosen the free-particles states $\ket*{\Phi_{\alpha}}$ to be orthonormal, and it follows then from equation (2.6) that the "in" and "out" states are also orthonormal.
+This is fairly obvious from the condition (2.5), but there is also a more direct proof.
+We can evaluate the matrix element $\bra*{\Psi_{\beta^{\pm}}}V\ket*{\Psi_{\alpha}^{\pm}}$ by using equation (2.6) in either the right or left side of the scalar product.
+Using the fact that $H_0$ and $V$ are Hermitian, the results must be equal applying operators on either bra or ket
+\[\bra*{\Psi^{\pm}_{\beta}}V\ket*{\Phi_{\alpha}}+\bra*{\Psi^{\pm}_{\beta}}V(E_{\alpha}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi^{\pm}_{\alpha}}= \]
+\begin{equation}
+    \bra*{\Phi_{\beta}}V\ket*{\Psi^{\pm}_{\alpha}} + \bra*{\Psi_{\beta}^{\pm}}V(E_{\beta}-H_0\mp i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{\pm}}
+\end{equation}
+% \footnote{The underline mean the operator is acting on the right-hand side.}
+Also, we have the following identity
+\[\frac{1}{E_{\alpha}-H_0\pm i\epsilon}-\frac{1}{E_{\beta}-H_0\mp i\epsilon} =\]
+\[\frac{E_{\alpha}-H_0\pm i\epsilon - E_{\beta}+H_0\pm i\epsilon}{\left(E_{\alpha}-H_0\pm i\epsilon\right)\left(E_{\beta}-H_0\mp i\epsilon\right)}=\]
+\begin{equation}
+    \frac{E_{\alpha}-E_{\beta}\pm 2i\epsilon}{\left(E_{\alpha}-H_0\pm i\epsilon\right)\left(E_{\beta}-H_0\mp i\epsilon\right)}
+\end{equation}
+then divide the equation (2.13) by $E_{\alpha}-E_{\beta}\pm 2i\epsilon$
+\[\frac{\bra{\Psi_{\beta}^{\pm}}V\ket*{\Phi_{\alpha}}}{E_{\alpha}-E_{\beta}\pm 2i\epsilon}-\frac{\bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{\pm}}}{E_{\alpha}-E_{\beta}\pm 2i\epsilon}\]
+\[=\frac{\bra*{\Psi_{\beta}^{\pm}}V(E_{\alpha}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{\pm}}-\bra*{\Psi_{\beta}^{\pm}}V(E_{\beta}-H_0\mp i\epsilon)^{-1}\ket*{\Psi_{\alpha}^{\pm}}}{E_{\alpha}-E_{\beta}\pm 2i\epsilon}\]
+\begin{equation}
+    =\bra*{\Psi_{\beta}^{\pm}}V(E_{\beta}-H_0\mp i\epsilon)^{-1}(E_{\alpha}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{\pm}}
+\end{equation}
+further simplify LHS, because the only important thing about $\epsilon$ is that it is a positive infinitesimal, so we may as well replace $2\epsilon$ here with $\epsilon$.
+\[-\left(\bra{\Phi_{\alpha}}(E_{\beta}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi_{\beta}^{\pm}}\right)^{*} - \bra*{\Phi_{\beta}}(E_{\alpha}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{\pm}}\]
+\begin{equation}
+    =\bra*{\Psi_{\beta}^{\pm}}V(E_{\beta}-H_0\mp i\epsilon)^{-1}(E_{\alpha}-H_0\pm i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{\pm}}
+\end{equation}
+according to equation (2.6), this tells us,
+\begin{equation}
+    -(\bra*{\Phi_{\alpha}}\ket*{\Psi_{\beta}^{\pm}-\Phi_{\beta}})^{*}-\braket*{\Phi_{\beta}}{\Psi_{\alpha}^{\pm}-\Phi_{\alpha}} = \braket*{\Psi_{\beta}^{\pm}-\Phi_{\beta}}{\Psi_{\alpha}^{\pm}-\Phi_{\alpha}}
+\end{equation}
+and therefore 
+\begin{equation}
+    \braket*{\Psi_{\beta}^{\pm}}{\Psi_{\alpha}^{\pm}} = \braket*{\Phi_{\beta}}{\Phi_{\alpha}} = \delta(\beta-\alpha)
+\end{equation}
+
+Because $S_{\beta\alpha}$ is the matrix of the scalar products of two complete orthonormal sets of state vectors, it must be unitary.
+We can also show this directly by multiplying equation (2.13) (for "in" states)
+
 \subsection{Rates}
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
