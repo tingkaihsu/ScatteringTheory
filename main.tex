@@ -360,8 +360,16 @@ and therefore
 \end{equation}
 
 Because $S_{\beta\alpha}$ is the matrix of the scalar products of two complete orthonormal sets of state vectors, it must be unitary.
-We can also show this directly by multiplying equation (2.13) (for "in" states)
-
+We can also show this directly by multiplying equation (2.13) (for "in" states) with $\delta(E_{\alpha}-E_{\beta})$, from which we learn that, recall
+\[T_{\beta\alpha} = \bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{+}}\]
+so that 
+\[\left(\bra*{\Phi_{\alpha}}V\ket*{\Psi_{\beta}^{+}}\right)^{*}-\bra*{\Phi_{\beta}}V\ket*{\Psi_{\alpha}^{+}} = \bra*{\Psi_{\beta}^{+}}V(E_{\beta}-H_0- i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{+}}\]
+\[-\bra*{\Psi_{\beta}^{+}}V(E_{\alpha}-H_0+i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{+}}\]
+expand the RHS with complete free-particle state,
+\[T^{*}_{\alpha\beta}-T_{\beta\alpha} = (E_{\alpha}-E_{\beta}+2i\epsilon)\]\[\int{d\gamma\,\left[\bra*{\Psi^{+}_{\beta}}V(E_{\beta}-E_{\gamma}-i\epsilon)^{-1}\ket*{\Phi_{\gamma}}\bra*{\Phi_{\gamma}}(E_{\alpha}-E_{\gamma}+i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{+}}\right]}\]
+now multiply the whole thing with the delta function and simplify the RHS,
+\[\delta(E_{\alpha}-E_{\beta})\left(T_{\alpha\beta}^{*}-T_{\beta\alpha}\right)=2i\epsilon\delta(E_{\alpha}-E_{\beta})\int{d\gamma\,\frac{T_{\gamma\beta}^{*}T_{\gamma\alpha}}{(E_{\alpha}-E_{\gamma})^2+\epsilon^2}}\]
+Consider the integral over $E_{\gamma}$
 \subsection{Rates}
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
