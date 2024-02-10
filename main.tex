@@ -369,8 +369,31 @@ expand the RHS with complete free-particle state,
 \[T^{*}_{\alpha\beta}-T_{\beta\alpha} = (E_{\alpha}-E_{\beta}+2i\epsilon)\]\[\int{d\gamma\,\left[\bra*{\Psi^{+}_{\beta}}V(E_{\beta}-E_{\gamma}-i\epsilon)^{-1}\ket*{\Phi_{\gamma}}\bra*{\Phi_{\gamma}}(E_{\alpha}-E_{\gamma}+i\epsilon)^{-1}V\ket*{\Psi_{\alpha}^{+}}\right]}\]
 now multiply the whole thing with the delta function and simplify the RHS,
 \[\delta(E_{\alpha}-E_{\beta})\left(T_{\alpha\beta}^{*}-T_{\beta\alpha}\right)=2i\epsilon\delta(E_{\alpha}-E_{\beta})\int{d\gamma\,\frac{T_{\gamma\beta}^{*}T_{\gamma\alpha}}{(E_{\alpha}-E_{\gamma})^2+\epsilon^2}}\]
-Consider the integral over $E_{\gamma}$
+Consider the integral over $E_{\gamma}$,and for infinitesimal $\epsilon$, the function $\epsilon/(x^2+\epsilon^2)$ is negligible away from $x=0$, with its integral over all $x$ ($\int{dx\,\epsilon/(x^2+\epsilon^2)}$) being $\pi$\footnote{Using trigonometric substitution, and integral over $E_{\gamma}$ considering $E_{\gamma}=E_{\alpha}$ in the numerator.}.
+\[2i\epsilon\delta(E_{\alpha}-E_{\beta})\int{d\gamma\,T_{\gamma\beta}^{*}T_{\gamma\alpha}\cdot\pi\delta(E_{\alpha}-E_{\gamma})}\]
+Multiplying with $-2i\pi$
+\[-2i\pi\delta(E_{\alpha}-E_{\beta})(T^{*}_{\alpha\beta}-T_{\beta\alpha})=\]
+\[\int{d\gamma\,\left[2i\pi\delta(E_{\gamma}-E_{\beta})T_{\gamma\beta}^{*}\right]\left[-2i\pi\delta(E_{\gamma}-E_{\alpha})T_{\gamma\alpha}\right]}\]
+and recalling equation (2.10)
+\[
+    -\left[S_{\beta\alpha}-\delta(\alpha-\beta)\right]-\left[S_{\alpha\beta}-\delta(\beta-\alpha)\right]^{*}
+\]
+\begin{equation}
+    =\int{d\gamma\,\left[S_{\gamma\beta}-\delta(\gamma-\beta)\right]^{*}\left[S_{\gamma\alpha}-\delta(\gamma-\alpha)\right]}
+\end{equation}
+or in other words
+\begin{equation}
+    \int{d\gamma\,S_{\gamma\beta}^{*}S_{\gamma\alpha}} = \delta(\alpha-\beta)
+\end{equation}
+which says S-matrix is unitary.
 \subsection{Rates}
+The S-matrix given by equation (2.10) evidently conserves energy\footnote{There are $\delta(E_{\alpha}-E_{\beta})$ in both the first term and the second term.}.
+More importantly, the symmetry of invariance under spatial translations\footnote{Because it is assumed no fixed scattering center in the general scattering theory.} tells us that $T_{\beta\alpha}$ and $S_{\beta\alpha}$ are proportional to a three-dimensional delta function $\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})$, where $\mathbf{P_{\alpha}}$ and $\mathbf{P}_{\beta}$ are the total momenta of the states $\alpha$ and $\beta$.
+In the case where $\alpha$ and $\beta$ are not identical states, we can write 
+\begin{equation}
+    S_{\beta\alpha} = \delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})M_{\beta\alpha}
+\end{equation}
+where $M_{\beta\alpha}$ is a smooth function of the momenta in the 
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
 \section{Introduction to Perturbation Theory and Scattering} 
