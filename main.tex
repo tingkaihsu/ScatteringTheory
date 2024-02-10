@@ -381,6 +381,11 @@ and recalling equation (2.10)
 \begin{equation}
     =\int{d\gamma\,\left[S_{\gamma\beta}-\delta(\gamma-\beta)\right]^{*}\left[S_{\gamma\alpha}-\delta(\gamma-\alpha)\right]}
 \end{equation}
+expand the braket,
+\[-S_{\beta\alpha}+\delta(\alpha-\beta)-S_{\alpha\beta}^{*}+\delta(\beta-\alpha)=\]
+\[\int{d\gamma\,\left[-S_{\gamma\beta}^{*}\delta(\gamma-\alpha)-\delta(\gamma-\beta)S_{\gamma\alpha}+S_{\gamma\beta}^{*}S_{\gamma\alpha}+\delta(\gamma-\beta)\delta(\gamma-\alpha)\right]}\]
+the RHS would be
+\[-S_{\alpha\beta}^{*}-S_{\beta\alpha}+\int{d\gamma\,S_{\gamma\beta}^{*}S_{\gamma\alpha}}+\delta(\beta-\alpha)\]
 or in other words
 \begin{equation}
     \int{d\gamma\,S_{\gamma\beta}^{*}S_{\gamma\alpha}} = \delta(\alpha-\beta)
@@ -393,7 +398,10 @@ In the case where $\alpha$ and $\beta$ are not identical states, we can write
 \begin{equation}
     S_{\beta\alpha} = \delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})M_{\beta\alpha}
 \end{equation}
-where $M_{\beta\alpha}$ is a smooth function of the momenta in the 
+where $M_{\beta\alpha}$ is a smooth function of the momenta in the states $\alpha$ and $\beta$.
+The presence of the delta functions in equation (2.21) poses an immediate problem: 
+in setting the probability for the transition $\alpha\rightarrow\beta$ equal to $|S_{\beta\alpha}|^2$, what are we to make of the squares of delta functions.
+
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
 \section{Introduction to Perturbation Theory and Scattering} 
