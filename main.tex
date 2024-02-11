@@ -400,7 +400,31 @@ In the case where $\alpha$ and $\beta$ are not identical states, we can write
 \end{equation}
 where $M_{\beta\alpha}$ is a smooth function of the momenta in the states $\alpha$ and $\beta$.
 The presence of the delta functions in equation (2.21) poses an immediate problem: 
-in setting the probability for the transition $\alpha\rightarrow\beta$ equal to $|S_{\beta\alpha}|^2$, what are we to make of the squares of delta functions.
+in setting the probability for the transition $\alpha\rightarrow\beta$ equal to $|S_{\beta\alpha}|^2$, what are we to make of the squares of delta functions?
+
+The easiest way to deal with this problem is to imagine that the system is contained in a box of finite volume $V$, and that the interaction is turned on only for a finite time $T$.
+One consequence is that the delta functions are instead replaced with,
+\begin{equation}
+    \begin{split}
+        \delta^{(3)}_{V}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta}) \equiv \frac{1}{(2\pi)^3}\int_{V}{d^3x\,e^{i(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})\cdot\mathbf{x}}}\\
+        \delta_{T}(E_{\alpha}-E_{\beta}) \equiv \frac{1}{2\pi}\int_{T}{dt\,e^{i(E_{\alpha}-E_{\beta})t}}
+    \end{split}
+\end{equation}
+Hence, the square of delta functions would be
+\begin{equation}
+    \begin{split}
+        \left[\delta_{V}^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})\right]^2 = \frac{V}{(2\pi)^3}\int_{V}{d^3x\,e^{i(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})\cdot\mathbf{x}}}\\
+        \left[\delta_{T}(E_{\alpha}-E_{\beta})\right]^2 = \frac{T}{2\pi}\int_{T}{dt\,e^{i(E_{\alpha}-E_{\beta})t}}
+    \end{split}
+\end{equation}
+
+Also, in using the square of S-matrix elements as transition probabilities, we must take the states to be suitably normalized.
+In coordinate space, this means that instead of giving a one-particle state $\ket*{\Phi_{\mathbf{p}}}$ of momentum $\mathbf{p}$ the wave function with continuum normalization
+\[\braket*{\Phi_{\mathbf{x}}}{\Phi_{\mathbf{p}}} = e^{i\mathbf{p}\cdot\mathbf{x}/\hbar}\]
+we take it to be normalized so that the integral of its absolute-value squared \textit{over the box} is unity:
+\begin{equation}
+    \braket*{\Phi_{\mathbf{x}}}{\Phi_{\mathbf{p}}^{\text{Box}}} = \frac{e^{i\mathbf{p}\cdot\mathbf{x}/\hbar}}{\sqrt{V}}
+\end{equation}
 
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
