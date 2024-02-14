@@ -483,9 +483,15 @@ The relation would be
 We will mostly work in the center-of-mass frame, in which the two particles have equal magnitude and opposite direction momenta - say, $\mathbf{p}$ and $-\mathbf{p}$ - in which case the relative velocity is relativisticly\footnote{$\mathbf{p} = \gamma m_0\mathbf{v}$, and $E=\gamma m_0c^2$.}
 \begin{equation}
     \begin{split}
-        u \equiv v-(-v) = \frac{|\mathbf{p}|c^2}{E_1}+\frac{|\mathbf{p}|c^2}{E_2} = 
+        u \equiv v-(-v) = \frac{|\mathbf{p}|c^2}{E_1}+\frac{|\mathbf{p}|c^2}{E_2} = \frac{|\mathbf{p}|}{\mu}\\
+        \mu = \frac{(E_{2}+E_{1})c^2}{E_{1}E_{2}}
     \end{split}
 \end{equation}
+with 
+\[E_1 = \sqrt{\mathbf{p}^2c^2+m_1^2c^4}\,\,\,E_2\sqrt{\mathbf{p}^2c^2+m_2^2c^4}\]
+
+It is still necessary to explain how to deal with the factor $\delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})d\beta$ in equations (2.29)-(2.31).
+For two particles in the final state, this factor is just proportional to the differential element of solid angle.
 
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
