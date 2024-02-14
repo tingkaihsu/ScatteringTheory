@@ -445,7 +445,48 @@ Putting this together, we see that the probability of the transition $\alpha\rig
     \end{split}
 \end{equation}
 The transition \textit{rate} is the transition probability divided by the time $T$ during which the interaction is acting, or
-\[\]
+\[\Gamma(\alpha\rightarrow\beta) = \frac{P(\alpha\rightarrow\beta)}{T}\]
+\begin{equation}
+    =\frac{1}{2\pi}\left[\frac{(2\pi)^3}{V}\right]^{N_{\alpha}+N_{\beta}-1}\delta_{T}(E_{\alpha}-E_{\beta})\delta_{V}^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})\left|M_{\beta\alpha}\right|^2
+\end{equation}
+But this is still not what is generally measured.
+Equation (2.28) gives the rate of transition to \textit{a single one of the possible final states.}
+Says this specific box state is $\beta$. 
+If consider stats that are around this box state $\beta$ in a range $d\beta$.
+We multiply equation (2.28) with the total number of states in range $d\beta$.
+Recall \footnote{If this is unfamiliar to you, a simple resolution is we need to have normalized state.}that the number of one-particle states in a volume $d^3p$ of momentum space is $Vd^3p/(2\pi)^3$.
+Therefore, the rate for transitions into a range $d\beta$ of final states is 
+\[d\Gamma(\alpha\rightarrow\beta) = [V/(2\pi)^3]^{N_{\beta}}\Gamma(\alpha\rightarrow\beta)d\beta\]
+\begin{equation}
+    =\frac{1}{2\pi}\left[\frac{(2\pi)^3}{V}\right]^{N_{\alpha}-1}\left|M_{\beta\alpha}\right|^{2}\delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})d\beta
+\end{equation}
+where $d\beta$ is here the product of the $d^3p$ factors for each particle in the state.
+This is our final general formula for transition rates.
+
+The factor $(1/V)^{N_{\alpha}-1}$ in equation (2.29)is just what should be expected on physical grounds.
+For $N_{\alpha} = 1$, this factor is unity, so the rate of decay of a single particle into some set $\beta$ of particles is independent of the volume in which the decay takes place
+\begin{equation}
+    d\Gamma(\alpha\rightarrow\beta) = \frac{1}{2\pi}\left|M_{\beta\alpha}\right|^{2}\delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})d\beta
+\end{equation}
+as one would expect.
+For $N_{\alpha} = 2$ this factor is $1/V$, so the rate of producing the final state $\beta$ in the collision of two particles is proportional to the density $1/V$ of either particle at the position of the other, again as would be expected.
+Rate could be reinterpreted as the probabilities for a collision to happen over the time.
+Cross-section has been seen as the area normal to three-axis that the particles must hit upon in order to be scattered.
+Therefore, we would show the relation between rate and cross-section in the following text.
+The probability of interaction between two particles moving relatively in velocities $u_{\alpha}$ over small-time interval $\Delta t$, and thus it would equal to the ratio of the volume where the interaction takes place and the box volume.
+\[P = \frac{u\Delta t\,\sigma}{V}\]
+The relation would be
+\begin{equation}
+    d\sigma(\alpha\rightarrow\beta)\equiv\frac{d\Gamma(\alpha\rightarrow\beta)}{u_{\alpha}/V} = \frac{(2\pi)^2}{u_{\alpha}}\left|M_{\beta\alpha}\right|^2\delta(E_{\alpha}-E_{\beta})\delta^{(3)}(\mathbf{P}_{\alpha}-\mathbf{P}_{\beta})d\beta
+\end{equation}
+
+We will mostly work in the center-of-mass frame, in which the two particles have equal magnitude and opposite direction momenta - say, $\mathbf{p}$ and $-\mathbf{p}$ - in which case the relative velocity is relativisticly\footnote{$\mathbf{p} = \gamma m_0\mathbf{v}$, and $E=\gamma m_0c^2$.}
+\begin{equation}
+    \begin{split}
+        u \equiv v-(-v) = \frac{|\mathbf{p}|c^2}{E_1}+\frac{|\mathbf{p}|c^2}{E_2} = 
+    \end{split}
+\end{equation}
+
 \subsection{The General Optical Theorem}
 \part{Quantum Field Theory}
 \section{Introduction to Perturbation Theory and Scattering} 
