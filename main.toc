@@ -2,14 +2,15 @@
 \contentsline {section}{\numberline {1}Potential Scattering}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}In-States}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Scattering Amplitudes}{5}{subsection.1.2}%
-\contentsline {section}{\numberline {2}General Scattering Theory}{9}{section.2}%
+\contentsline {subsection}{\numberline {1.3}Optical Theorem}{9}{subsection.1.3}%
+\contentsline {section}{\numberline {2}General Scattering Theory}{10}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The S-Matrix}{10}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Rates}{15}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The General Optical Theorem}{19}{subsection.2.3}%
-\contentsline {part}{II\hspace {1em}Quantum Field Theory}{19}{part.2}%
-\contentsline {section}{\numberline {3}Introduction to Perturbation Theory and Scattering}{19}{section.3}%
-\contentsline {section}{\numberline {4}Perturbation I. Wick Diagrams}{19}{section.4}%
-\contentsline {section}{\numberline {5}Perturbation II. Divergence and Counterterms}{19}{section.5}%
-\contentsline {section}{\numberline {6}Feynman Diagrams}{19}{section.6}%
-\contentsline {section}{\numberline {7}Cross-Sections S-Matrix}{19}{section.7}%
-\contentsline {section}{\numberline {8}Computing S-Matrix Elements from Feynman Diagrams}{19}{section.8}%
+\contentsline {subsection}{\numberline {2.2}Rates}{16}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The General Optical Theorem}{20}{subsection.2.3}%
+\contentsline {part}{II\hspace {1em}Quantum Field Theory}{20}{part.2}%
+\contentsline {section}{\numberline {3}Introduction to Perturbation Theory and Scattering}{20}{section.3}%
+\contentsline {section}{\numberline {4}Perturbation I. Wick Diagrams}{20}{section.4}%
+\contentsline {section}{\numberline {5}Perturbation II. Divergence and Counterterms}{20}{section.5}%
+\contentsline {section}{\numberline {6}Feynman Diagrams}{20}{section.6}%
+\contentsline {section}{\numberline {7}Cross-Sections S-Matrix}{20}{section.7}%
+\contentsline {section}{\numberline {8}Computing S-Matrix Elements from Feynman Diagrams}{20}{section.8}%
